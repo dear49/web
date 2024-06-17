@@ -1,30 +1,142 @@
+/* body 요소에 스타일 적용 */
 body {
-    font-family: 'Arial', sans-serif;
-  }
-  
-  .navbar-brand {
-    font-weight: bold;
-  }
-  
-  .jumbotron {
-    background-color: #f8f9fa;
-    padding: 2rem 1rem;
-  }
-  
-  .card {
-    transition: transform 0.2s ease-in-out;
-  }
-  
-  .card:hover {
-    transform: scale(1.05);
-  }
-  
-  footer {
-    background-color: #f8f9fa;
-    padding: 1rem 0;
-  }
-  
-  footer p {
-    margin: 0;
-  }
-  
+  font-family: 'Galmuri9'; /* 폰트 이름을 'Galmuri9'로 수정 */
+  height: 100%;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f0f0f0;
+  padding-top: 56px; /* 네비게이션 바의 높이에 맞춰 패딩을 설정 */
+}
+
+/* 나머지 스타일 규칙은 여기에 추가 */
+.navbar-brand {
+  font-weight: bold;
+}
+
+.jumbotron {
+  background-color: #56abff;
+  padding: 2rem 1rem;
+}
+
+.card {
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+  transition: transform 0.2s ease-in-out;
+  position: relative;
+  overflow: hidden;
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card-img-overlay {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.card-img-top {
+  transition: opacity 0.3s ease;
+}
+
+.card:hover .card-img-top {
+  opacity: 0.7;
+}
+
+footer {
+  background-color: #f8f9fa;
+  padding: 1rem 0;
+}
+
+footer p {
+  margin: 0;
+}
+
+.lyrics {
+  text-align: center;
+  white-space: pre-wrap;
+  padding: 20px;
+  border: 2px solid #ccc;
+  background-color: #ffffff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 80%;
+}
+
+.lyrics-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  height: 50%;
+  background-color: #ffffff;
+  border: 2px solid #ccc;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.concept-photo {
+  margin-top: 50px;
+}
+
+.concept-photo img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 14px 0;
+  z-index: 1000;
+}
+
+.content {
+  margin-top: 60px;
+  padding: 20px;
+}
+
+.nav-item.active .nav-link {
+  font-weight: bold;
+}
+
+.fandom-info-content {
+  display: flex;
+  align-items: center;
+}
+
+.content-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.text-container {
+  flex: 1; /* 텍스트 컨테이너가 남은 공간을 모두 차지하도록 설정 */
+}
+
